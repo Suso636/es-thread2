@@ -1,136 +1,34 @@
 package it.thereaper.thread;
 
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-                System.out.println("Hello world!");
+       
+        Contatore c1 = new Contatore();
 
-                        System.out.println("Hello world!");
+        Lavoratore l1 = new Lavoratore(c1, "thread1");
+        Lavoratore l2 = new Lavoratore(c1, "thread2");
 
-                                System.out.println("Hello world!");
-
-                                        System.out.println("Hello world!");
-
-                                                System.out.println("Hello world!");
-
-                                                        System.out.println("Hello world!");
-
-                                                                System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
-                System.out.println("Hello world!");
-
-                        System.out.println("Hello world!");
+        Thread t1 = new Thread(l1);
+        Thread t2 = new Thread(l2);
 
 
-                                System.out.println("Hello world!");
-
-
-                                        System.out.println("Hello world!");
-
-                                                System.out.println("Hello world!");
-
-                                                        System.out.println("Hello world!");
-
-                                                                System.out.println("Hello world!");
-
-                                                                        System.out.println("Hello world!");
-
-                                                                                System.out.println("Hello world!");
-
-                                                                                        System.out.println("Hello world!");
-
-                                                                                                System.out.println("Hello world!");
-
-                                                                                                        System.out.println("Hello world!");
-
-                                                                                                                System.out.println("Hello world!");
-
-                                                                                                                        System.out.println("Hello world!");
-
-                                                                                                                                System.out.println("Hello world!");
-
-                                                                                                                                        System.out.println("Hello world!");
-
-                                                                                                                                                System.out.println("Hello world!");
-
-                                                                                                                                                        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
-
-                System.out.println("Hello world!");
-
-                        System.out.println("Hello world!");
-
-
-                                System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
-                System.out.println("Hello world!");
-
-                        System.out.println("Hello world!");
-
-                                System.out.println("Hello world!");
-
-                                        System.out.println("Hello world!");
-
-                                                System.out.println("Hello world!");
-
-
-                                                        System.out.println("Hello world!");
-
-
-                                                                System.out.println("Hello world!");
+            t1.start();
+            t2.start();
 
 
 
-                                                                        System.out.println("Hello world!");
+            
+        try {
+            t1.join();
+            t2.join();
+        } catch (InterruptedException e) {
 
+            System.out.println(e);
 
-                                                                                System.out.println("Hello world!");
-
-
-                                                                                        System.out.println("Hello world!");
-
-                                                                                                System.out.println("Hello world!");
-
-                                                                                                        System.out.println("Hello world!");
-
-                                                                                                                System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
-                System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
-                System.out.println("Hello world!");
-
-                        System.out.println("Hello world!");
-
-                                System.out.println("Hello world!");
-
-                                        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
-
+        }
+        
+    System.out.println("max raggiunto");
     }
 }
